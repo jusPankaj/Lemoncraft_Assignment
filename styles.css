@@ -1,0 +1,281 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    margin: 0 5%;
+}
+
+/* Navbar and Header */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    border-bottom: 1px solid black;
+    position: fixed;
+    margin-top: 0;
+    width: 88.7%;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.nav_image {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 15px;
+    border-radius: 25%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 1rem;
+}
+
+.nav_button {
+    margin-left: 20px;
+    width: 8rem;
+    height: 2.5rem;
+    border: none;
+    background-color: #70AA26;
+    color: white;
+    font-weight: 600;
+}
+
+.nav_button:hover {
+    background-color: #508E01;
+}
+
+/* Main Content */
+.main_top {
+    background: url("https://img.freepik.com/free-photo/cup-coffee-wireless-keyboard-mouse_140725-8958.jpg?t=st=1718963221~exp=1718966821~hmac=4acfc353ed38cb51816712d1dd052ad31a3f97abbaae0bcd5db69eb2a78cfc85&w=1800");
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    padding: 3rem;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.main_top_content {
+    width: 50%;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.main_top_content h1, .main_top_content p {
+    margin: 0 0 1rem 0;
+}
+
+.empower_business {
+    background: url("https://www.code-brew.com/wp-content/uploads/2019/09/solutions-banner.webp?var=1447773230");
+    background-size: cover;
+    height: 300px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+}
+
+.empower_business_paragraph {
+    font-size: 36px;
+    width: 60%;
+}
+
+.empower_button {
+    width: 8rem;
+    height: 2.5rem;
+    border: none;
+    background-color: #70AA26;
+    color: white;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.empower_button:hover {
+    background-color: #508E01;
+}
+
+/* Image Slider */
+#image_slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+#slider {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+#slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#prev, #next {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+#prev:hover, #next:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.top_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.industries, .services {
+    display: flex;
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.industries h1, .services h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.industries_list, .services_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.industries_list li, .services_list li {
+    margin-bottom: 10px;
+}
+
+.footer_bottomline {
+    background-color: #111;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer_bottomline p {
+    margin: 5px 0;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .main_top_content {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0 2%;
+    }
+
+    .main_top {
+        height: auto;
+        min-height: 300px;
+    }
+
+    .main_top_content {
+        width: 100%;
+    }
+
+    .empower_business_paragraph {
+        width: 100%;
+    }
+
+    #prev, #next {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .top_footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .industries, .services, .contact_us {
+        flex: 1 1 100%;
+    }
+
+    .footer_bottomline {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .main_top {
+        padding: 2rem;
+    }
+
+    .empower_business {
+        padding: 2rem;
+    }
+
+    .empower_business_paragraph {
+        font-size: 28px;
+    }
+
+    .empower_button {
+        margin-left: 10px;
+    }
+}
